@@ -1,0 +1,62 @@
+/*** Smart PHP Calendar Login Form ***/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+}
+
+img {
+    border: 0;
+}
+
+.header1 {
+    text-align: left;
+    padding: 7px;
+    font-family: corbel, sans-serif, arial, verdana;
+    color: #333;
+    font-size: 20px;
+}
+
+#logout {
+    text-align: right;
+    padding: 7px;
+    font-family: corbel, sans-serif, arial, verdana;
+    color: #800;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#container {
+    width: 800px;
+    margin: 0 auto;
+    font-family: sans-serif, Verdana;
+    position: relative;
+    top: 50px;
+    color: #4D4D4D;
+}
+
+input, select {
+    margin-bottom: 1em;
+}
+
+#forgot-pass {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    color: #444;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+#respuesta{
+     color:red;
+     position: fixed;
+     top:0px;
+     left: 50%;
+     display: none;
+     background: #FEF5C9;
+     padding: 5px;
+}

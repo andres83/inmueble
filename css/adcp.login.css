@@ -1,0 +1,133 @@
+/*** Smart PHP Calendar Login Form ***/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+}
+
+img {
+    border: 0;
+}
+
+.header1 {
+    text-align: left;
+    padding: 7px;
+    font-family: corbel, sans-serif, arial, verdana;
+    color: #333;
+    font-size: 13px;
+}
+
+#container {
+    width: 800px;
+    margin: 0 auto;
+    font-family: sans-serif, Verdana;
+    position: relative;
+    top: 100px;
+    color: #4D4D4D;
+}
+.login-form-top {
+    position: relative;
+    margin: 0 auto;
+    width: 359px;
+    background: #fff url('../img/install-content.png');
+    font-size: 12px;
+}
+.login-form-bottom {
+    margin: 0 auto;
+    width: 359px;
+    height: 8px;
+    background: #fff url('../img/install-foot.png');
+    font-size: 12px;
+}
+
+input {
+    border: 1px solid #ccc;
+    width: 190px;
+    padding: 6px;
+    font-family: sans-serif, Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    color: #1D2A5B;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #f5f5f5;
+    cursor: pointer;
+    color: #333;
+    padding: 6px 0;
+    width: 90px;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ccc;
+}
+
+#statusMsg,
+#statusMsg_register {
+    text-align: center;
+    display: none;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.error {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-color:#FEF5C9;
+    border:1px solid #E8D15C;
+}
+
+#login-table,
+#register-table {
+    margin: 15px auto;
+}
+
+#login-table td,
+#register-table td {
+    padding: 5px;
+}
+
+#pass {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 11px;
+}
+
+#user-passwords {
+    padding: 10px;
+    background-color: #fff !important;
+    border: 0 !important;
+    text-align: left !important;
+    padding: 6px !important;
+}
+
+#user-passwords h3 {
+    border-bottom: 1px solid #ddd;
+    margin: 6px 0;
+    font-size: 13px;
+}
+
+#user-passwords ul {
+    list-style-type: none;
+}
+
+#user-passwords ul li {
+    margin: 6px 0;
+}
+
+#forgot-pass {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    color: #444;
+    font-size: 11px;
+    font-weight: bold;
+}

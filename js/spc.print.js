@@ -1,0 +1,12 @@
+/**
+ * Smart PHP Calendar
+ *
+ * Copyright (c) 2012 Yasin Dagli, Smart PHP Calendar, All rights reserved.
+ *
+ * This file is protected by international laws. Reverse engineering this file is strictly prohibited.
+ */
+$(function(){function f(c,d){c=c||$("#print-start-date").val();d=d||$("#print-end-date").val();c=SPC.Date.dateConverter.userToCore(c);d=SPC.Date.dateConverter.userToCore(d);SPC.Calendar.getEvents("print",[c,d],SPC.printCalIds,function(g,f,h){var g=h.all,f=c,h=d,b="<h3>"+SPC.Date.getUserLongDate(SPC.Date.dateConverter.userToCore($("#print-start-date").val()))+" - "+SPC.Date.getUserLongDate(SPC.Date.dateConverter.userToCore($("#print-end-date").val()))+"</h3><br /><ul id='print-event-list'>",a,l,i,
+j,e;for(e in g)if(!(e<f||e>h)){for(var b=b+("<li><h2 class='group-date'>"+SPC.Date.getUserLongDate(e)+"</h2>"),b=b+"<ul>",k=0,m=g[e].length;k<m;k++)a=g[e][k],l=a.title||SPC.translate("(No title)"),i=SPC.Date.dateConverter.coreToUser(a.start_date),"multi_day"==a.type&&(i=SPC.Date.dateConverter.coreToUser(a.start_date)+" - "+SPC.Date.dateConverter.coreToUser(a.end_date)),j=SPC.Date.convertTimeFormat(a.start_time)+" - "+SPC.Date.convertTimeFormat(a.end_time),"00:00"==a.start_time&&"00:00"==a.end_time&&
+(j="all-day"),a.created_by&&SPC.translate("Created by"),b+="<li class='ui-helper-clearfix'><h3 class='title'>"+l+"</h3><div class='calendar'                                        style='                                            color: "+SPC.printCals[a.cal_id].color+";'>"+SPC.printCals[a.cal_id].name+"</div><div class='date'>"+i+", "+j+"</div><div class='description'>"+a.description+"</div>",a.location&&(b+="<div class='location'>                                      <strong class='location-label'>"+
+SPC.translate("location")+":</strong> "+a.location+"</div>"),"none"!=a.repeat_type&&(b+="<div class='repeat'>                                      <strong class='repeat-label'>"+SPC.translate("repeat")+":</strong> "+a.repeat_type+"</div>"),a.created_by!=SPC.USERNAME&&(b+="<div class='created-by'>                                      <strong class='created-by-label'>"+SPC.translate("Created by")+":</strong> "+a.created_by+"</div>"),b+="</li>";b+="</ul>                        </li>"}$("#print-body").html(b+
+"</ul>")})}$("#print-date").html(SPC.Date.getUserLongDate(SPC.currentDate));$("#print-start-date, #print-end-date").datepicker({dateFormat:SPC.Date.dateConverter.getDatePickerDateFormat()}).bind("change",function(){f()});f();$("#print-calendar").bind("click",function(){window.print()})});
